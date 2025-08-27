@@ -1,0 +1,11 @@
+# railway.toml
+[build]
+builder = "DOCKERFILE"
+
+[deploy]
+startCommand = "uvicorn main:app --host 0.0.0.0 --port $PORT"
+
+[env]
+# These are placeholders, but you can override them in Railway dashboard
+GOOGLE_CREDENTIALS = ""
+SPREADSHEET_ID = ""
